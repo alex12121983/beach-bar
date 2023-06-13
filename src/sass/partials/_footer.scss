@@ -4,18 +4,31 @@ footer {
     height: 250px;
     position: relative;
     overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+  	background-color: $background-color1;
+	@media screen and (min-width: $mobile) {
+		width: $mobile;
+	}
+	@media screen and (min-width: $tablet) {
+		width: $tablet;
+	}
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
+
 	.info {
 		float: left;
 		width: 50%;
 		height: 100%;
 		padding: 63px 136px 33px 294px;
-		background-color: #FDB92D;
+		background-color: $color4;
 		p {
-			width: 292px;
-			font-family: "Roboto", sans-serif ;
-			color: #262121;
-			font-size: 18px;
-			font-weight: 400;
+			// width: 292px;
+			font-family: $brand-font-1;
+			color: $color2;
+			font-size: $h3-font-size;
+			font-weight: $base-font-weight;
 			line-height: 2;
 		}
 	}

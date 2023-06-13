@@ -2,14 +2,36 @@
 $color1: #FFFFFF;
 $color2: #262121;
 $color3: rgba(253, 185, 45, 0.97);
-$color4: #404040;
+$color4: #FDB92D;
 $color5: #373737;
 $color6: #00639D;
 $font-color: #000530;
 $h2-font-color: #FFFFFF;
 $placeholder: $color2;
-$base-font-weight: 300;
-$brand-font-1: '',sans-serif;
+
+$background-color1: #fff;
+
+// Шрифт Roboto//
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$base-font-weight: 400;
+$h2-font-weight: 500;
+$h5-font-weight: 300;
+
+$base-font-size: 16px;
+
+$h2-font-size: 44px;
+$h3-font-size: 18px;
+$h4-font-size: 20px;
+$h5-font-size: 14px;
+
+$brand-font-1: 'Roboto',sans-serif;
 $brand-font-2: '',sans-serif;
-$background-color1: #E5E5E5;
-$background-color2: #e5e5e5;
+
+/*background image for section first view*/
+$background-image_first_view: url(../images/banner_1.png);
+
+/*break points*/
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1366px;

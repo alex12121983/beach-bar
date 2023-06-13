@@ -1,95 +1,95 @@
 .first_view {
+	@include box;
     height: 837px;
-    width: 100%;
-    overflow: visible;
+	margin-left: auto;
+  	margin-right: auto;
     position: relative;
+	background-image: $background-image_first_view;
+
+	@media screen and (min-width: $mobile) {
+		width: $mobile;
+	}
+	@media screen and (min-width: $tablet) {
+		width: $tablet;
+	}
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
 	.layout {
 		overflow: visible;
-	}
-	img.fv_img {
-		width: 100%;
-		height: 837px;
-		position: relative;
-		z-index: 1;
-	}
-	.text{
-		position: absolute;
-		top: 233px;
-		left: 0;
-		width: 100%;
-		z-index: 2;
+		margin-left: 165px;
+  		margin-right: 165px;
+		height: 100%;
+		padding-top: 233px;
 	}
 	h2 {
 		width: 100%;
 		text-align: center;
-		display: block;
-		margin: 0 0 282px 0;
-		font-family: "Roboto", sans-serif ;
+		// margin-top: 233px;
+		font-family: $brand-font-1;
 		color: $color1;
-		font-size: 44px;
-		font-weight: 500;
+		font-size: $h2-font-size;
+		font-weight: $h2-font-weight;
 	}
-	form.find_a_table {
+	.find_a_table {
 		display: block;
-		width: 518px;
+		width: 100%;
 		height: 40px;
-		margin: 0 296px 0 296px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 282px;
 		fieldset {
 			width: 100%;
-			height: 100%;
-			display: block;
-			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 19px;
 		}
 		.form {
-			float: left;
-			width: 160px;
 			height: 40px;
-			margin: 0 19px 0 0;
-			padding: 10px 20px 10px 20px;
-			background-color: $color1;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 5px;
+			padding: 10px 20px;
+			background-color: $background-color1;
+			color: $color2;
 			img {
-				float: left;
 				width: 15px;
 				height: 15px;
-				margin: 0 5px 0 0;
 			}
 			select {
-				float: left;
 				border: none;
 			}
 			input {
-				float: left;
-				width: 80px;
-				margin: 0 5px 0 0;
 				border: none;
+				font-family: $brand-font-1;
+				color: $placeholder;
+				font-size: $base-font-size;
+				font-weight: $base-font-weight;
 			}
 			span {
-				float: left;
 				height: 100%;
 				padding: 7px 0 7px 0;
-			}
-			img {
-				width: 10px;
-				height: 5px;
+				img {
+					width: 10px;
+					height: 5px;
+				}
 			}
 		}
-		&:last-child {
-			float: left;
-			margin: 0 0 0 0;
-		}
-
 	}
 	.btn {
 		display: block;
-		overflow: hidden;
+		overflow: visible;
 		width: 160px;
 		height: 40px;
 		margin: 36px auto 0 auto;
 		cursor: pointer;
 		background-color: $color3;
-		border: 1px solid $color3;
+		border: none;
 		border-radius: 4px;
-		font-family: "Roboto", sans-serif;
+		font-family: $brand-font-1;
 		color: $color1;
 		font-size: 20px;
 		font-weight: 500;
@@ -97,41 +97,181 @@
 	p.scroll {
 		display: block;
 		overflow: visible;
-		margin: 61px auto 63px auto;
-		width: 46px;
+		margin-top: 61px;
+		text-align: center;
 		height: 29px;
 		position: relative;
-		font-family: "Roboto", sans-serif;
+		font-family: $brand-font-1;
 		color: $color3;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: $base-font-size;
+		font-weight: $base-font-weight;
 		line-height: 1.2;
 		letter-spacing: 1.3px;
+		// z-index: 2;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -122px;
+			left: 50%;
+			z-index: 10;
+			width: 2px;
+			height: 112px;
+			background-color: $color3;
+			display: block;
+			overflow: visible;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -122px;
+			left: 50%;
+			z-index: 10;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin: 0 0 0 -6px;
+			background-color: $color3;
+			display: block;
+			overflow: visible;
+		}
 	}
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: -122px;
-		left: 50%;
-		z-index: 2;
-		width: 2px;
-		height: 112px;
-		background-color: $color3;
-		display: block;
-		overflow: hidden;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: -122px;
-		left: 50%;
-		z-index: 2;
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		margin: 0 0 0 -6px;
-		background-color: $color3;
-		display: block;
-		overflow: hidden;
-	}
+	
 }
+
+// .first_view {
+//     height: 837px;
+//     width: 100%;
+//     overflow: visible;
+//     position: relative;
+// 	.layout {
+// 		overflow: visible;
+// 	}
+// 	img.fv_img {
+// 		width: 100%;
+// 		height: 837px;
+// 		position: relative;
+// 		z-index: 1;
+// 	}
+// 	.text{
+// 		position: absolute;
+// 		top: 233px;
+// 		left: 0;
+// 		width: 100%;
+// 		z-index: 2;
+// 	}
+// 	h2 {
+// 		width: 100%;
+// 		text-align: center;
+// 		display: block;
+// 		margin: 0 0 282px 0;
+// 		font-family: "Roboto", sans-serif ;
+// 		color: $color1;
+// 		font-size: 44px;
+// 		font-weight: 500;
+// 	}
+// 	form.find_a_table {
+// 		display: block;
+// 		width: 518px;
+// 		height: 40px;
+// 		margin: 0 296px 0 296px;
+// 		fieldset {
+// 			width: 100%;
+// 			height: 100%;
+// 			display: block;
+// 			overflow: hidden;
+// 		}
+// 		.form {
+// 			float: left;
+// 			width: 160px;
+// 			height: 40px;
+// 			margin: 0 19px 0 0;
+// 			padding: 10px 20px 10px 20px;
+// 			background-color: $color1;
+// 			img {
+// 				float: left;
+// 				width: 15px;
+// 				height: 15px;
+// 				margin: 0 5px 0 0;
+// 			}
+// 			select {
+// 				float: left;
+// 				border: none;
+// 			}
+// 			input {
+// 				float: left;
+// 				width: 80px;
+// 				margin: 0 5px 0 0;
+// 				border: none;
+// 			}
+// 			span {
+// 				float: left;
+// 				height: 100%;
+// 				padding: 7px 0 7px 0;
+// 			}
+// 			img {
+// 				width: 10px;
+// 				height: 5px;
+// 			}
+// 		}
+// 		&:last-child {
+// 			float: left;
+// 			margin: 0 0 0 0;
+// 		}
+
+// 	}
+// 	.btn {
+// 		display: block;
+// 		overflow: hidden;
+// 		width: 160px;
+// 		height: 40px;
+// 		margin: 36px auto 0 auto;
+// 		cursor: pointer;
+// 		background-color: $color3;
+// 		border: 1px solid $color3;
+// 		border-radius: 4px;
+// 		font-family: "Roboto", sans-serif;
+// 		color: $color1;
+// 		font-size: 20px;
+// 		font-weight: 500;
+// 	}
+// 	p.scroll {
+// 		display: block;
+// 		overflow: visible;
+// 		margin: 61px auto 63px auto;
+// 		width: 46px;
+// 		height: 29px;
+// 		position: relative;
+// 		font-family: "Roboto", sans-serif;
+// 		color: $color3;
+// 		font-size: 16px;
+// 		font-weight: 400;
+// 		line-height: 1.2;
+// 		letter-spacing: 1.3px;
+// 	}
+// 	&:before {
+// 		content: '';
+// 		position: absolute;
+// 		bottom: -122px;
+// 		left: 50%;
+// 		z-index: 2;
+// 		width: 2px;
+// 		height: 112px;
+// 		background-color: $color3;
+// 		display: block;
+// 		overflow: hidden;
+// 	}
+// 	&:after {
+// 		content: '';
+// 		position: absolute;
+// 		bottom: -122px;
+// 		left: 50%;
+// 		z-index: 2;
+// 		width: 14px;
+// 		height: 14px;
+// 		border-radius: 50%;
+// 		margin: 0 0 0 -6px;
+// 		background-color: $color3;
+// 		display: block;
+// 		overflow: hidden;
+// 	}
+// }

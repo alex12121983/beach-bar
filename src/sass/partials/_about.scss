@@ -1,53 +1,112 @@
 .about {
     display: block;
-    width: 100%;
+	position: relative;
     overflow: visible;
-    background-color: #E5E5E5;
-    position: relative;
+    margin-left: auto;
+  	margin-right: auto;
+    background-color: $background-color1;
+	height: 400px;
+    // position: relative;
+	@media screen and (min-width: $mobile) {
+		width: $mobile;
+	}
+	@media screen and (min-width: $tablet) {
+		width: $tablet;
+	}
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
+	.layout {
+		overflow: visible;
+		margin-left: 165px;
+  		margin-right: 165px;
+		padding-top: 75px;
+		z-index: 1;
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	bottom: 20px;
+		// 	left: 50%;
+		// 	z-index: 2;
+		// 	width: 14px;
+		// 	height: 14px;
+		// 	border-radius: 50%;
+		// 	margin: 0 0 0 -6px;
+		// 	background-color: $color3;
+		// 	display: block;
+		// 	overflow: visible;
+		// }
+		&:before {
+			content: '';
+			position: absolute;
+			top: 43px;
+			left: 50%;
+			z-index: 10;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin: 0 0 0 -6px;
+			background-color: $color3;
+			display: block;
+			overflow: visible;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 50%;
+			z-index: 2;
+			width: 2px;
+			height: 50px;
+			background-color: $color3;
+			display: block;
+			overflow: visible;
+		}
+	}
 	h3 {
 		display: block;
-		width: 100%;
-		height: 25px;
-		margin: 75px auto 20px auto;
 		position: relative;
+		height: 25px;
+		margin-bottom: 19px;
 		span {
 			display: block;
-			overflow: hidden;
+			overflow: visible;
 			width: 130px;
-			margin: 0 auto 0 auto;
-			font-family: "Roboto", sans-serif;
-			color: #262121;
-			font-size: 18px;
-			font-weight: 400;
+			margin: 0 auto;
+			font-family: $brand-font-1;
+			color: $color2;
+			font-size: $h3-font-size;
+			font-weight: $base-font-weight;
 			text-transform: uppercase;
 			text-align: center;
 			letter-spacing: 2px;
-			background-color: #E5E5E5;
+			background-color: $background-color1;
 			position: relative;
 			z-index: 2;
 			padding: 0 10px 0 10px;
 		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 2px;
+			margin: -2px 0 0 0;
+			background-color: $color3;
+			display: block;
+			overflow: hidden;
+		}
 	}
-	&:before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		z-index: 1;
-		width: 100%;
-		height: 2px;
-		margin: -2px 0 0 0;
-		background-color: rgba(253, 185, 45, 0.97);
-		display: block;
-		overflow: hidden;
-	}
+	
 	.text {
 		display: block;
 		overflow: visible;
 		width: 100%;
 		height: 200px;
-		padding: 48px 45px 48px 45px;
-		margin: 0 auto 70px auto;
+		padding: 20px 45px;
+		margin: 0 auto;
 		z-index: 1;
 		position: relative;
 		p {
@@ -55,39 +114,77 @@
 			overflow: visible;
 			width: 100%;
 			margin: 0 0 20px 0;
-			font-family: "Roboto", sans-serif;
-			color: #262121;
-			font-size: 16px;
-			font-weight: 400;
+			font-family: $brand-font-1;
+			color: $color2;
+			font-size: $base-font-size;
+			font-weight: $base-font-weight;
 			line-height: 1;
-			background-color: #E5E5E5;
+			&:last-child {
+				margin: 0 0 0 0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -18px;
+				left: 0;
+				z-index: 2;
+				width: 100%;
+				height: 2px;
+				background-color: $color3;
+				display: block;
+				overflow: visible;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -58px;
+				left: 50%;
+				z-index: 2;
+				width: 2px;
+				height: 40px;
+				background-color: $color3;
+				display: block;
+				overflow: visible;
+			}
 		}
-		&:last-child {
-			margin: 0 0 0 0;
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	bottom: -18px;
+		// 	left: 0;
+		// 	z-index: 2;
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	background-color: $color3;
+		// 	display: block;
+		// 	overflow: visible;
+		// }
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	bottom: -58px;
+		// 	left: 50%;
+		// 	z-index: 2;
+		// 	width: 2px;
+		// 	height: 40px;
+		// 	background-color: $color3;
+		// 	display: block;
+		// 	overflow: visible;
+		// }
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -65px;
+			left: 50%;
+			z-index: 2;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin: 0 0 0 -6px;
+			background-color: $color3;
+			display: block;
+			overflow: visible;
 		}
 	}
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: -18px;
-		left: 0;
-		z-index: 2;
-		width: 100%;
-		height: 2px;
-		background-color: rgba(253, 185, 45, 0.97);
-		display: block;
-		overflow: visible;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: -58px;
-		left: 50%;
-		z-index: 2;
-		width: 2px;
-		height: 40px;
-		background-color: rgba(253, 185, 45, 0.97);
-		display: block;
-		overflow: visible;
-	}
+	
 } 
