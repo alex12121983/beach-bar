@@ -116,6 +116,15 @@
 			position: relative;
 			&:hover {
 				border-bottom: 2px solid $color3;
+				#pop-up_1{
+					display: block;
+				}
+				#pop-up_2{
+					display: block;
+				}
+				#pop-up_3{
+					display: block;
+				}
 			}
 		}
 		.trigger_1 {
@@ -149,6 +158,7 @@
 		left: 50%;
 		width: 330px;
 		height: 330px;
+		border-radius: 10px;
 		margin: -175px 10px 10px -165px;
 		padding: 45px 75px 45px 75px;
 		background-color: $color3;
@@ -213,6 +223,7 @@
 		left: 50%;
 		width: 330px;
 		height: 330px;
+		border-radius: 10px;
 		margin: -175px 10px 10px -165px;
 		padding: 45px 75px 45px 75px;
 		background-color: $color3;
@@ -277,6 +288,7 @@
 		left: 50%;
 		width: 330px;
 		height: 330px;
+		border-radius: 10px;
 		margin: -175px 10px 10px -165px;
 		padding: 45px 75px 45px 75px;
 		background-color: $color3;
